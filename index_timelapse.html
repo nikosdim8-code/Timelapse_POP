@@ -212,8 +212,8 @@
     <!-- 🌍 Author and institution information -->
     <div class="legend-author">
        <strong>Data source:</strong> Hellenic Statistical Authority - Population data 1991-2021<br>
-      <strong>Produced by:</strong> XXX<br> <!-- 🌍 Author name and surname -->
-	  <strong>Student ID:</strong> XXX<br> <!-- 🌍 Author ID -->
+      <strong>Produced by:</strong> NIKOLAOS DIMITROPOULOS<br> <!-- 🌍 Author name and surname -->
+	  <strong>Student ID:</strong> rs20435<br> <!-- 🌍 Author ID -->
       National Technical University of Athens (NTUA)<br>
       School of Rural, Surveying & Geoinformatics Engineering<br>
       Cartography Laboratory<br>
@@ -262,13 +262,13 @@
   <!-- 🌍 Speed control - how fast animation plays (in milliseconds per frame) -->
   <!-- You may test a minimum (min) value of 200 and a maximum (max) value of 2000 -->
   <div class="control-label">Speed (ms/frame):</div>
-  <input type="range" min="XXX" max="XXX" value="1000" step="100" id="speedSlider">
+  <input type="range" min="200" max="2000" value="1000" step="100" id="speedSlider">
   <span class="control-value" id="speedLabel">1000</span> ms<br>
   
   <!-- 🌍 Max circle radius - controls maximum size of circles -->
   <!-- You may test a minimum (min) value of 40 and a maximum (max) value of 150 -->
   <div class="control-label">Max Circle Radius (px):</div>
-  <input type="range" min="XX" max="XXX" value="100" id="maxRadiusSlider">
+  <input type="range" min="40" max="150" value="100" id="maxRadiusSlider">
   <span class="control-value" id="maxRadiusValue">100</span> px<br>
   
   <!-- 🗺️ Opacity control - transparency of circles (0% = invisible, 100% = solid) -->
@@ -325,7 +325,7 @@
    * IMPORTANT: Column names are case-sensitive! Make sure they match exactly.
    * 🌍 Change 'XXX' with the 4 column names with the population data per year (i.e. 'POP1991')
    */  
-  const YEAR_COLUMNS = ['XXXX', 'XXXX', 'XXXX', 'XXXX'];
+  const YEAR_COLUMNS = ['POP1991', 'POP2001', 'POP2011', 'POP2021'];
   
   /**
    * YEARS: Array of the actual year values that correspond to each column
@@ -350,7 +350,7 @@
    * For external hosting:
    *    - Use full URL like 'https://example.com/data/file.geojson'
    */
-  const DATA_PATH = 'DATA FOLDER NAME ON GITHUB/GEOJSON FILE NAME';
+  const DATA_PATH = 'data_timelapse/dimoi_poipop_timelapse_WGS.geojson';
   
   /**
    * BOUNDARIES_PATH: Location of your GeoJSON file with polygon boundaries
@@ -362,7 +362,7 @@
    * population circles, providing geographic context.
    * 🌍 Change this to point to YOUR boundary file
    */
-  const BOUNDARIES_PATH = 'DATA FOLDER NAME ON GITHUB/GEOJSON FILE NAME';
+  const BOUNDARIES_PATH = 'data_timelapse/dimoi_oria.geojson';
 
   // ============================================================
   // 2. MAP INITIALIZATION
@@ -392,8 +392,8 @@
   let map = new maplibregl.Map({
     container: 'map',           // HTML element ID to render map in (don't change this)
     style: 'https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json', // Default basemap style
-    center: [27.4, 35.6],       // 🌍 [longitude, latitude] - CHANGE THIS TO MATCH THE STUDY AREA CENTER (APPROXIMATELY)!
-    zoom: 9                    // 🌍 Initial zoom level - CHANGE THIS SO THAT THE REQUIRED ZOOM LEVEL ENCOMPASSES THE ENTIRE STUDY AREA. SMALLER VALUES - ZOOM OUT!
+    center: [22.4, 39.4],       // 🌍 [longitude, latitude] - CHANGE THIS TO MATCH THE STUDY AREA CENTER (APPROXIMATELY)!
+    zoom: 8.5                    // 🌍 Initial zoom level - CHANGE THIS SO THAT THE REQUIRED ZOOM LEVEL ENCOMPASSES THE ENTIRE STUDY AREA. SMALLER VALUES - ZOOM OUT!
   });
 
   // ============================================================
@@ -861,16 +861,16 @@
     // These are the population values shown in the legend
     // Adjust them to make sense for your study area
     
-    const value1 = XXX;      // 🌍 Smallest circle
-    const value2 = XXXXX;     // 🌍 Small-medium circle
-    const value3 = XXXXX;     // 🌍 Medium-large circle
-    const value4 = XXXXXX;    // 🌍 Largest circle
+    const value1 = 5000;      // 🌍 Smallest circle
+    const value2 = 20000;     // 🌍 Small-medium circle
+    const value3 = 50000;     // 🌍 Medium-large circle
+    const value4 = 150000;    // 🌍 Largest circle
     
     // 🌍 Define the text labels that appear for each circle
-    const label1 = "X,XXX";
-    const label2 = "XX,XXX";
-    const label3 = "XX,XXX";
-    const label4 = "XXX,XXX";
+    const label1 = "5.000";
+    const label2 = "20.000";
+    const label3 = "50.000";
+    const label4 = "150.000";
     
     // Examples for different contexts:
     // 
@@ -1273,5 +1273,6 @@
 -->
 </body>
 </html>
+
 
 
