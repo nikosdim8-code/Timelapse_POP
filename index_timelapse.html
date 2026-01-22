@@ -212,8 +212,8 @@
     <!-- 🌍 Author and institution information -->
     <div class="legend-author">
        <strong>Data source:</strong> Hellenic Statistical Authority - Population data 1991-2021<br>
-      <strong>Produced by:</strong> XXX<br> <!-- 🌍 Author name and surname -->
-	  <strong>Student ID:</strong> XXX<br> <!-- 🌍 Author ID -->
+      <strong>Produced by:</strong> NIKOLAOS DIMITROPOULOS<br> <!-- 🌍 Author name and surname -->
+	  <strong>Student ID:</strong> rs20435<br> <!-- 🌍 Author ID -->
       National Technical University of Athens (NTUA)<br>
       School of Rural, Surveying & Geoinformatics Engineering<br>
       Cartography Laboratory<br>
@@ -325,7 +325,7 @@
    * IMPORTANT: Column names are case-sensitive! Make sure they match exactly.
    * 🌍 Change 'XXX' with the 4 column names with the population data per year (i.e. 'POP1991')
    */  
-  const YEAR_COLUMNS = ['XXXX', 'XXXX', 'XXXX', 'XXXX'];
+  const YEAR_COLUMNS = ['POP1991', 'POP2001', 'POP2011', 'POP2021'];
   
   /**
    * YEARS: Array of the actual year values that correspond to each column
@@ -350,7 +350,7 @@
    * For external hosting:
    *    - Use full URL like 'https://example.com/data/file.geojson'
    */
-  const DATA_PATH = 'DATA FOLDER NAME ON GITHUB/GEOJSON FILE NAME';
+  const DATA_PATH = 'data_timelapse/dimoi_poipop_timelapse_WGS.geojson';;
   
   /**
    * BOUNDARIES_PATH: Location of your GeoJSON file with polygon boundaries
@@ -362,7 +362,7 @@
    * population circles, providing geographic context.
    * 🌍 Change this to point to YOUR boundary file
    */
-  const BOUNDARIES_PATH = 'DATA FOLDER NAME ON GITHUB/GEOJSON FILE NAME';
+  const BOUNDARIES_PATH = 'data_timelapse/dimoi_oria.geojson';
 
   // ============================================================
   // 2. MAP INITIALIZATION
@@ -1273,5 +1273,6 @@
 -->
 </body>
 </html>
+
 
 
